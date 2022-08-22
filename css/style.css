@@ -27,7 +27,7 @@ header {
 }
 
 .header-title {
-    color: white;
+    color: red;
     font-size: 400%;
     font-weight: 900;
     text-align: center;
@@ -41,4 +41,25 @@ header {
 .card {
     background-color: black;
     color: white;
+    border-radius: 5%;
+}
+
+.card img {
+    border-radius: 5% 5% 0 0;
+    border: 4px black solid;
+}
+
+@media only screen and (max-width: 786px) {
+    .header-section {
+        width: 100%;
+        padding: 10%;
+    }
+
+    .header-title {
+        font-size: 300%;
+    }
+
+    .header-text {
+        font-size: 100%;
+    }
 }
