@@ -4,7 +4,7 @@ function inputValueConversation(fieldID) {
     const getFieldString = getFieldID.value;
     const fieldValue = parseFloat(getFieldString);
 
-    if (isNaN(fieldValue)) {
+    if (isNaN(fieldValue) === true) {
         getFieldID.value = '';
         alert('Invalid Number');
         return;
@@ -39,6 +39,22 @@ function playerExpense() {
     return playerCost;
 }
 
+// Total Player Expenses Calculation
+function TotalPlayerExpense() {
+    const previousPlayerExpense = playerExpense();
+    const managerExpense = inputValueConversation('manager-cost');
+    const coachExpense = inputValueConversation('coach-cost');
+
+    const totalExpense = previousPlayerExpense + managerExpense + coachExpense;
+
+    setExpenseField('total-expense', totalExpense);
+    return totalExpense;
+}
+
 document.getElementById('btn-calculate').addEventListener('click', function () {
     playerExpense();
+})
+
+document.getElementById('btn-totalCalculate').addEventListener('click', function () {
+    TotalPlayerExpense();
 })
