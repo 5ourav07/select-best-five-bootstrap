@@ -1,5 +1,6 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 
 /* common style */
 * {
@@ -31,6 +32,7 @@ header {
     font-size: 400%;
     font-weight: 900;
     text-align: center;
+    font-family: 'DynaPuff', cursive;
 }
 
 .header-text {
@@ -47,6 +49,11 @@ header {
 .card img {
     border-radius: 5% 5% 0 0;
     border: 4px black solid;
+}
+
+/* footer section */
+footer h1 {
+    font-family: 'DynaPuff', cursive;
 }
 
 @media only screen and (max-width: 786px) {
